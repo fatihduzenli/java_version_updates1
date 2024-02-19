@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> items = new ArrayList<Integer>();// now ArrayList accepts only integer
+        ArrayList<Integer> items = new ArrayList<>();// now ArrayList accepts only integer
 
         items.add(1);
         items.add(2);
