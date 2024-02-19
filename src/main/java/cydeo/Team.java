@@ -3,11 +3,11 @@ package cydeo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team {
+public class Team<T> {
 
     private String name;
 
-    private List<Player>member=new ArrayList();
+    private List<T>member=new ArrayList();
 
     public Team(String name) {
         this.name = name;
@@ -17,13 +17,13 @@ public class Team {
         return name;
     }
 
-    public boolean addPlayer(Player player){
+    public boolean addPlayer(T player){
         if (member.contains(player)){
-            System.out.println(player.getName()+" is already in the team");
+            System.out.println(((Player)player).getName()+" is already in the team");
             return false;
         }else {
             member.add(player);
-            System.out.println(player.getName()+ " picked for team"+this.name);
+            System.out.println(((Player)player).getName()+ " picked for team"+this.name);
         }return true;
 
 
