@@ -32,6 +32,28 @@ ApplePredicate weight  = apple -> apple.getWeight()>200;
         System.out.println(filteringApples(inventory, color));
         System.out.println(filteringApples(inventory, weight));
 
+        System.out.println("========================================");
+        AppleString str =  apple -> "An apple of "+apple.getWeight()+" gram";
+
+        AppleString type =  apple ->{
+            if (apple.getWeight()>200){
+                return "A Heavy "+apple.getColor()+" Apple";
+            }else {
+             return    "A light "+apple.getColor()+" Apple";
+            }
+        };
+ // Another way
+        AppleString type2 = apple -> {
+            String ch = apple.getWeight()>200 ? "Heavy" : "Light";
+            return "A"+ ch+ " "+apple.getColor()+" apple";
+        };
+
+
+
+        printApple(inventory,str);
+        printApple(inventory,type);
+
+
 
     }
 
@@ -47,5 +69,11 @@ ApplePredicate weight  = apple -> apple.getWeight()>200;
             }
         }
         return result;
+    }
+    public static void printApple (List<Apple> inventory, AppleString appleString){
+        for (Apple eachApple : inventory) {
+            String output = appleString.output1(eachApple);
+            System.out.println(output);
+        }
     }
 }
