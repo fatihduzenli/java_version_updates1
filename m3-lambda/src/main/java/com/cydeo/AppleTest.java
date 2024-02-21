@@ -14,13 +14,23 @@ public class AppleTest {
         inventory.add(new Apple(200,Color.GREEN));
         inventory.add(new Apple(50,Color.RED));
 
+        inventory.forEach(apple -> System.out.println(apple));
 
+/*
         List<Apple>bigApples = filteringApples(inventory,new AppleHeavyPredicate());
         System.out.println(bigApples);
         System.out.println("---------------");
         List<Apple> greenApple = filteringApples(inventory, new AppleGreenColorPredicate());
         System.out.println(greenApple);
 
+
+ */
+ApplePredicate color = apple -> apple.getColor().equals(Color.GREEN);
+
+ApplePredicate weight  = apple -> apple.getWeight()>200;
+
+        System.out.println(filteringApples(inventory, color));
+        System.out.println(filteringApples(inventory, weight));
 
 
     }

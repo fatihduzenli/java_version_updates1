@@ -1,5 +1,7 @@
 package com.cydeo;
 
+import java.util.List;
+
 public class ArraySorting {
 
     public static void main(String[] args) {
@@ -14,10 +16,20 @@ public class ArraySorting {
          as.sort(bubbleSort);
 
 
+
+        Sorting quickSort1 = () -> System.out.println("Quick Sorting");
+        as.sort(quickSort1);
+
+        as.sort(() -> System.out.println("Quick Sorting"));
+
+
+
+
     }
 
     private void sort(Sorting sorting) {
 
         sorting.sort();
     }
+
 }
