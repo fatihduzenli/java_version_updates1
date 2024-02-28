@@ -13,7 +13,7 @@ public class FunctionalInterface {
 
 
         // *****************************PREDICATE*****************************//
-
+          // Accepting one parameter and returning boolean
         Predicate<Integer> lesserThen = i -> i < 18;
 
         System.out.println(lesserThen.test(100));
