@@ -10,6 +10,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>m3-lambda</module>
+        <module>m4-double_colon_operators</module>
+        <module>m5-comparator_interface</module>
+        <module>m6-stream</module>
     </modules>
 
     <properties>

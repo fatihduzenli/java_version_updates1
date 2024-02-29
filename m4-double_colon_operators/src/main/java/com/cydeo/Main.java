@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -41,6 +42,37 @@ public class Main {
         // if the functional interface taking the class name as a parameter, we can call the method with just class name
 
         BiFunction<MyClass,Integer,Double> func4 =MyClass::method;
+
+        Consumer<Integer>display = i -> System.out.println(i);
+        Consumer<Integer>display2 = System.out::println;
+        // println is a static method that comes from System.out class, so we can call it with double colon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

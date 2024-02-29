@@ -6,8 +6,8 @@ import java.util.List;
 public class AppleTest {
 
     public static void main(String[] args) {
-        List<Apple> inventory = new ArrayList<>();
 
+        List<Apple> inventory = new ArrayList<>();
 
         inventory.add(new Apple(300,Color.GREEN));
         inventory.add(new Apple(100,Color.RED));
