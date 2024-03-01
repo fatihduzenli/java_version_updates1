@@ -57,6 +57,8 @@ public class StreamOperations {
                  .forEach(System.out::println);
 
 
+//---------Task------- Print the number of the characters for each word?
+
 
 
 
