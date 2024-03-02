@@ -43,12 +43,13 @@ public class FindingMatching {
 
 
         //---------------FIND ANY------------------//
-
-        Optional<Dish>dish=DishData.getAll().stream().filter(Dish::isVegetarian).findAny(); // here it will return any of the vegetarian dishes
+       // here it will return any of the vegetarian dishes
+        Optional<Dish>dish=DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
         System.out.println(dish.get());
 
         //---------------FIND FIRST------------------//
-        Optional<Dish>dish2=DishData.getAll().stream().filter(Dish::isVegetarian).findFirst(); // here it will find the veggie dishes and return the first one
+        // here it will find the veggie dishes and return the first one
+        Optional<Dish>dish2=DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
         System.out.println(dish2);
 
         // PARALLEL STREAMS (Async)=> es zamanli olmayan
