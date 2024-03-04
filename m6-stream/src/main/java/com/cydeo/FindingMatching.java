@@ -41,7 +41,7 @@ public class FindingMatching {
         System.out.println(isHealthy2);
 
 
-
+        System.out.println("--------------------------");
         //---------------FIND ANY------------------//
        // here it will return any of the vegetarian dishes
         Optional<Dish>dish=DishData.getAll().stream().filter(Dish::isVegetarian).findAny();

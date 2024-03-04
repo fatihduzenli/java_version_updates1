@@ -26,7 +26,7 @@ public class StreamOperations {
 
         //---------------------------DISTINCT--------------------------//
 
-      Stream<Integer> stream= list.stream()
+      Stream<Integer> stream= list.stream() // removes the duplicate
                 .filter(p -> p % 2 == 0)
                 .distinct();
       stream.forEach(System.out::println);  //The Stream is closed here
