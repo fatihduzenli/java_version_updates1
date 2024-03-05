@@ -21,7 +21,7 @@ public class OrElseThrowDemo {
 
         // After java 10 update
 
-        System.out.println(str.orElseThrow()); // this method does the same job with is present and get method
-
+        System.out.println(str.orElseThrow(RuntimeException::new));
+     // this method is combination of isPresent and get method.If there is a value it prints it,if not,we can pass our exception
     }
 }
