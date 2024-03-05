@@ -29,7 +29,7 @@ public class TakeWhileDropWhile {
 
     public static List<String> getStocksBelowFiveHundredFilter(List<Stock> stocks){
         return stocks.stream()
-                .peek(stock -> System.out.println("Filter processing : " + stock))
+                .peek(stock -> System.out.println("Filter processing : " + stock))// peek is for printing the action on the console
                 .filter(TakeWhileDropWhile::isStockLessThanFiveHundred)
                 .map(Stock::getName)
                 .collect(Collectors.toList());
